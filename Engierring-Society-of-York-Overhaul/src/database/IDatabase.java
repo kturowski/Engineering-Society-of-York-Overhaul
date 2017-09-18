@@ -11,8 +11,11 @@ import java.util.Scanner;
 
 import model.User;
 
+public interface IDatabase {
+	
+}
 
-public class IDatabase {
+//public class IDatabase {
 	static{
 		try{
 			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");

@@ -31,7 +31,7 @@ public class IDatabase {
 	 * ----------------MAIN QUERY METHODS------------------------------------------------------------
 	 */
 	
-	public int queryForLoginIdByUsername(String username){
+	public int queryForLoginIdByUsername(final String username){
 		try{
 			return doQueryLoop(new Query<Integer>(){
 				@Override
@@ -62,7 +62,7 @@ public class IDatabase {
 		}
 	}
 	
-	public boolean updateLoginIdByUsername(String username, int loginId){
+	public boolean updateLoginIdByUsername(final String username, final int loginId){
 		try{
 			return doQueryLoop(new Query<Boolean>(){
 				@Override 
@@ -126,7 +126,7 @@ public class IDatabase {
 		return success;
 	}
 	
-	public boolean insertNewAccountIntoDatabase(User user){
+	public boolean insertNewAccountIntoDatabase(final User user){
 		try{
 			return doQueryLoop(new Query<Boolean>(){
 				@Override

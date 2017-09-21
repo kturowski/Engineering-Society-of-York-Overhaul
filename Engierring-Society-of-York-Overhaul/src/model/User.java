@@ -5,7 +5,8 @@ public class User {
 	private String username = null;
 	private String password = null;
 	private int loginId = -1;
-	private String name = null;
+	private String firstname = null;
+	private String lastname = null;
 	private String email = null;
 	private boolean membership = false; 
 	
@@ -13,11 +14,12 @@ public class User {
 		
 	}
 	
-	public User(String user, String pass, int id, String name, String email, boolean membership){
+	public User(String user, String pass, int id, String fisrtname, String lastname, String email, boolean membership){
 		this.username = user;
 		this.password = pass;
 		this.loginId = id;
-		this.name = name;
+		this.firstname = firstname;
+		this.setLastname(lastname); 
 		this.email = email;
 		this.membership = membership;
 		
@@ -36,7 +38,7 @@ public class User {
 	}
 	
 	public String getName(){
-		return this.name;
+		return this.firstname;
 	}
 	
 	public String getEmail(){
@@ -61,8 +63,8 @@ public class User {
 		this.loginId = id;
 	}
 	
-	public void setName(String name){
-		this.name = name;
+	public void setFirstname(String firstname){
+		this.firstname = firstname;
 	}
 	
 	public void setEmail(String email){
@@ -71,6 +73,14 @@ public class User {
 	
 	public void setAsMember() {
 		this.membership = true;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 }

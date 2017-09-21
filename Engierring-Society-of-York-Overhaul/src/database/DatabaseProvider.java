@@ -1,13 +1,18 @@
 package database;
 
+
 public abstract class DatabaseProvider {
-	private static IDatabase databaseInstance;
+private static IDatabase theInstance;
 	
-	public static IDatabase getDatabase() {
-		if(databaseInstance == null){
-			databaseInstance = new IDatabase();
+	public static void setInstance(IDatabase db) {
+		theInstance = db;
+	}
+	
+	public static IDatabase getInstance() {
+		if (theInstance == null) {
+			throw new IllegalStateException("IDatabase instance has not been set!");
 		}
-		return databaseInstance;
+		return theInstance;
 	}
 	
 }

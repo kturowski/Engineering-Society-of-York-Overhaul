@@ -18,6 +18,11 @@ public interface IDatabase {
 	
 	//user methods 
 	List<User> getAccountInfo(final String name);
+	List<User> matchUsernameWithPassword(final String name);
+	List<User> addUserToDatabase(final String name, final String pswd, final String email, final String type, final String first,
+			final String last);
+	List<User> findAllUsers();
+	List<User> changePassword(final String name, final String pswd, final String newPassword);
+	List<User> DeleteUserFromDatabase(final String name, final String pswd);
 	
-
 }

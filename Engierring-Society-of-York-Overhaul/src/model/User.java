@@ -9,7 +9,15 @@ public class User {
 	private String lastname = null;
 	private String email = null;
 	private boolean membership = false; 
-	
+	private int userID; 
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
 	public User(){
 		
 	}

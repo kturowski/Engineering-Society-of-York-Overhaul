@@ -1,4 +1,3 @@
-//from edu.ycp.cs320.booksdb.persist
 package database;
 
 import java.io.BufferedReader;
